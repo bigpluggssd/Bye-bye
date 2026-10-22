@@ -1,1 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>information</title>
+    <link rel="icon" type="image/png" href="webIcon.jpg">
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            margin: 20px;
+        }
+        .links-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .link-item {
+            display: flex;
+            align-items: center;
+        }
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 8px;
+        }
+        a {
+            text-decoration: none;
+            color: #00a2ff; 
+            transition: color 0.2s;
+            outline: none;
+            width: max-content;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #00ffcc; 
+        }
+        .version {
+            margin-top: 20px;
+            font-size: 16px;
+            color: #888888;
+        }
+        .bio {
+            margin-top: -26px;
+            margin-bottom: 20px;
+            margin-left: 45px;
+            font-style: italic;
+            color: #888888;
+            font-size: 14px;
+        }
+        .version-bio {
+            margin-top: -5px;
+            margin-left: 59px;
+            font-style: italic;
+            color: #aaaaaa;
+            font-size: 14px;
+        }
+        .help-link-wrapper {
+            margin-left: 32px; 
+        }
+        .help-link-wrapper a {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <h2>information</h2>
+    <div class="bio">By voidvless</div>
 
+    <div class="links-group">
+        <div class="link-item">
+            <img src="github.png" alt="GitHub" class="icon">
+            <a href="https://github.com/bigpluggssd/ByeByeRemaster" target="_blank">GitHub</a>
+        </div>
+
+        <div class="link-item">
+            <img src="telegram.png" alt="Telegram" class="icon">
+            <a href="https://t.me/voidvless" target="_blank">Telegram</a>
+        </div>
+
+        <div class="help-link-wrapper">
+            <a href="help.html">Open help</a>
+        </div>
+    </div>
+
+    <div class="version">version 1.0.0 (beta)</div>
+    <div class="version-bio">Global update!</div>
+
+</body>
+</html>
