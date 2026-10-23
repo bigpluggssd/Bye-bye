@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>help</title>
-    <link rel="icon" type="image/png" href="webIcon.jpg">
+    <link rel="icon" type="image/png" href="icon/webIcon.jpg">
     <style>
         body {
-            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('backhelp.jpg') no-repeat center center fixed;
+            background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('icon/backhelp.jpg') no-repeat center center fixed;
             background-size: cover;
             color: #ffffff;
             font-family: Arial, sans-serif;
@@ -41,16 +41,100 @@
             text-decoration: underline;
             color: #00ffcc;
         }
+
+        .folder-container {
+            display: inline-block;
+            width: max-content;
+        }
+
+        .folder-title {
+            font-size: 14px;
+            color: #00a2ff;
+            cursor: pointer;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center; 
+            gap: 6px;
+            line-height: 1;
+        }
+        .folder-container:hover .folder-title span {
+            color: #00ffcc;
+            text-decoration: underline;
+        }
+
+
+        .folder-icon::before {
+            content: "📁";
+            display: inline-block;
+            transition: transform 0.2s ease;
+            font-size: 14px;
+        }
+
+        .folder-container:hover .folder-icon::before {
+            content: "📂";
+            transform: scale(1.1);
+        }
+
+        .download-folder {
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-left: 24px;
+            transition: max-height 0.4s ease 0.3s, opacity 0.3s ease 0.3s, margin-top 0.3s ease 0.3s;
+            margin-top: 0;
+        }
+
+        .download-folder a {
+            opacity: 0;
+            transform: translateY(-20px);
+            transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.2s ease;
+        }
+
+        .download-folder a:nth-child(1) {
+            transition-delay: 0.15s;
+        }
+        .download-folder a:nth-child(2) {
+            transition-delay: 0s;
+        }
+
+        .folder-container:hover .download-folder {
+            max-height: 120px;
+            opacity: 1;
+            margin-top: 10px;
+            transition-delay: 0s;
+        }
+
+        .folder-container:hover .download-folder a:nth-child(1) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.1s;
+        }
+        .folder-container:hover .download-folder a:nth-child(2) {
+            opacity: 1;
+            transform: translateY(0);
+            transition-delay: 0.25s;
+        }
     </style>
 </head>
 <body>
-
     <div class="help-title">help</div>
-
     <div class="links-group">
         <a href="index.html">Go back</a>
         <a href="help.txt">Open help.txt</a>
+        
+        <div class="folder-container">
+            <div class="folder-title">
+                <span class="folder-icon"></span>
+                <span>download</span>
+            </div>
+            <div class="download-folder">
+                <a href="https://github.com/bigpluggssd/Bye-Bye/raw/refs/heads/main/download/proj.7z" target="_blank">download src</a>
+                <a href=https://drive.usercontent.google.com/download?id=1x-m2gxKnb8--U3GRtZ3ZuCAm3far1n3W&export=download" target="_blank">download B.B.Remaster</a>
+            </div>
+        </div>
     </div>
-
 </body>
 </html>
